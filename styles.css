@@ -34,9 +34,12 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   font-size: 0.9375rem;
-  padding: 3.5rem 1.875rem;
+  padding: 3.5rem 1.875rem 2.875rem 1.875rem;
 }
 
 .page-header {
@@ -73,7 +76,7 @@ body {
   margin-inline: auto;
   background-color: var(--color-white);
   border-radius: 0.5rem;
-  max-width: 21.875rem;
+  max-width: clamp(11rem, 100vw, 22rem);
   padding: 2rem;
   box-shadow: 0 1em 2em -0.73em rgba(131, 166, 210, 0.5);
   font-weight: 200;
@@ -103,7 +106,7 @@ body {
   }
 
   & img {
-    margin: 2rem 0 1em auto;
+    margin: 2rem 0 1rem auto;
   }
 }
 
@@ -154,12 +157,12 @@ body {
 
 @media (min-width: 90rem) {
   body {
-    padding: 7rem 10rem;
+    padding-top: 6.375rem;
+    padding-bottom: 10.125rem;
   }
 
   .features {
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
-    /* grid-template: repeat(2, 1fr) / repeat(3, 1fr); */
   }
 
   .supervisor {
