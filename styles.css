@@ -49,6 +49,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-750);
   margin: var(--spacing-700) var(--spacing-400) 2.875rem;
 }
@@ -174,7 +175,8 @@ body {
 @media (min-width: 90rem) {
   body {
     max-width: 70rem;
-    margin: 6.375rem auto;
+    margin: auto;
+    padding-block: 6.375rem;
   }
 
   .features {
