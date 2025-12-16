@@ -1,43 +1,53 @@
 :root {
-  /* primary */
+  /* Colors */
+  --color-grey-500: hsl(234, 12%, 34%);
+  --color-grey-400: hsl(212, 6%, 44%);
+  --color-white: hsl(0, 0%, 100%);
   --color-red: hsl(0, 78%, 62%);
   --color-cyan: hsl(180, 62%, 55%);
-  --color-orange: hsl(34, 97%, 64%);
   --color-blue: hsl(212, 86%, 64%);
-  /* neutral */
-  --color-gray-500: hsl(234, 12%, 34%);
-  --color-gray-400: hsl(212, 6%, 44%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-white-bg: hsl(0, 0%, 98%);
-  /* typography */
+  --color-orange: hsl(34, 97%, 64%);
+  /* Typography */
   --font-family-base: 'Poppins', sans-serif;
+  --font-size-base: 1rem;
+  --font-weight-extra-light: 200;
   --font-weight-base: 400;
-  --font-size-base: 16px;
+  --font-weight-semi-bold: 600;
   --line-height-base: 1.4;
-}
-
-html {
-  box-sizing: border-box;
-  background-color: var(--color-white-bg);
-  color: var(--color-gray-500);
-  font: var(--font-weight-base) var(--font-size-base) / var(--line-height-base)
-    var(--font-family-base);
-  scroll-behavior: smooth;
+  /* Spacing */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  /* Border radius */
+  --radius-base: 0.5rem;
+  /* Miscellaneous */
+  --shadow-base: 0 1em 2em -0.73em rgba(131, 166, 210, 0.5);
+  --height-min: 0.25rem;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  background-color: var(--color-white);
+  color: var(--color-grey-500);
+  font: var(--font-weight-base) var(--font-size-base) / var(--line-height-base)
+    var(--font-family-base);
+  scroll-behavior: smooth;
+}
+
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   font-size: 0.9375rem;
   padding: 3.5rem 1.875rem 2.875rem 1.875rem;
 }
@@ -53,7 +63,7 @@ body {
   }
 
   & .page-description {
-    margin-top: 1rem;
+    margin-top: var(--spacing-200);
   }
 
   & span {
@@ -64,7 +74,7 @@ body {
 .features {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: var(--spacing-400);
   margin-top: 3.75rem;
   margin-inline: auto;
 }
@@ -75,10 +85,10 @@ body {
   flex-direction: column;
   margin-inline: auto;
   background-color: var(--color-white);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-base);
   max-width: clamp(11rem, 100vw, 22rem);
-  padding: 2rem;
-  box-shadow: 0 1em 2em -0.73em rgba(131, 166, 210, 0.5);
+  padding: var(--spacing-400);
+  box-shadow: var(--shadow-base);
   font-weight: 200;
 
   &::before {
@@ -87,7 +97,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 0.25rem;
+    height: var(--height-min);
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
@@ -106,7 +116,7 @@ body {
   }
 
   & img {
-    margin: 2rem 0 1rem auto;
+    margin: var(--spacing-400) 0 var(--spacing-200) auto;
   }
 }
 
