@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Frontend Mentor | Four card feature section</title>
+    <meta
+      name="description"
+      content="Improve your front-end skills by building a Four card feature section coding challenge"
+    />
 
     <link
       rel="icon"
@@ -16,16 +19,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
-      rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="page-header">
       <h1 class="page-title">
-        <span>Reliable, efficient delivery</span> Powered by Technology
+        Reliable, efficient delivery <strong>Powered by Technology</strong>
       </h1>
       <p class="page-description">
         Our Artificial Intelligence powered tools use millions of project data
@@ -33,35 +40,61 @@
       </p>
     </header>
 
-    <main>
-      <article class="features">
-        <section class="feature-card supervisor">
-          <h2>Supervisor</h2>
-          <p>Monitors activity to identify project roadblocks</p>
-          <img src="./images/icon-supervisor.svg" alt="Supervisor Icon" />
-        </section>
+    <main class="features">
+      <article class="feature-card supervisor">
+        <h2 class="card-title">Supervisor</h2>
+        <p class="card-description">
+          Monitors activity to identify project roadblocks
+        </p>
+        <img
+          class="card-icon"
+          src="./images/icon-supervisor.svg"
+          alt="Supervisor Icon"
+          width="64"
+          height="64"
+        />
+      </article>
 
-        <section class="feature-card team-builder">
-          <h2>Team Builder</h2>
-          <p>
-            Scans our talent network to create the optimal team for your project
-          </p>
-          <img src="./images/icon-team-builder.svg" alt="Team Builder Icon" />
-        </section>
+      <article class="feature-card team-builder">
+        <h2 class="card-title">Team Builder</h2>
+        <p class="card-description">
+          Scans our talent network to create the optimal team for your project
+        </p>
+        <img
+          class="card-icon"
+          src="./images/icon-team-builder.svg"
+          alt="Team Builder Icon"
+          width="64"
+          height="64"
+        />
+      </article>
 
-        <section class="feature-card karma">
-          <h2>Karma</h2>
-          <p>Regularly evaluates our talent to ensure quality</p>
-          <img src="./images/icon-karma.svg" alt="Karma Icon" />
-        </section>
+      <article class="feature-card karma">
+        <h2 class="card-title">Karma</h2>
+        <p class="card-description">
+          Regularly evaluates our talent to ensure quality
+        </p>
+        <img
+          class="card-icon"
+          src="./images/icon-karma.svg"
+          alt="Karma Icon"
+          width="64"
+          height="64"
+        />
+      </article>
 
-        <section class="feature-card calculator">
-          <h2>Calculator</h2>
-          <p>
-            Uses data from past projects to provide better delivery estimates
-          </p>
-          <img src="./images/icon-calculator.svg" alt="Calculator Icon" />
-        </section>
+      <article class="feature-card calculator">
+        <h2 class="card-title">Calculator</h2>
+        <p class="card-description">
+          Uses data from past projects to provide better delivery estimates
+        </p>
+        <img
+          class="card-icon"
+          src="./images/icon-calculator.svg"
+          alt="Calculator Icon"
+          width="64"
+          height="64"
+        />
       </article>
     </main>
   </body>
